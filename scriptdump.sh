@@ -29,7 +29,7 @@ case "$choix" in
     exit;;
 1)  read -p "Voulez vous deposer le dump sous quel repertoire?:"  repdump
 repertoire=$repdump
-mysqldump -u $user -p$passe  --all-databases --events --ignore-table=mysql.event > $repertoire/mysql-dump-all-base.sql
+mysqldump -u $user -p$passe  --all-databases > $repertoire/mysql-dump-all-base.sql
 sleep 2
 echo -e "${vertfonce}dump effectue${neutre}";;
 2) read -p "Veuillez entrer la base (ou les bases separees par des espaces):" bases
